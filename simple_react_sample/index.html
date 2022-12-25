@@ -10,8 +10,6 @@
     <p>This page demonstrates using React with no build tooling.</p>
     <p>React is loaded as a script tag.</p>
 
-    <!-- We will put our React component inside this div. -->
-    <div id="like_button_container"></div>
 
     <div id="root"></div>
 
@@ -24,17 +22,22 @@
 
 
     <!-- Load our React component. -->
-    <script type="text/babel" src="like_button.jsx"></script>
+    <!-- <script type="text/babel" src="like_button.jsx"></script> -->
     <script type="text/babel" src="counter.jsx"></script>
     <script type="text/babel">
     
       function MyApp() {
-        return <h1>Hello, world!</h1>;
+        return (
+          <div>
+        <h1>Hello, world!</h1>
+        <Counter />
+        </div>)
+       
       }
 
       const container = document.getElementById('root');
       const root = ReactDOM.createRoot(container);
-      root.render(<Counter />);
+      root.render(<Counter />)
 
     </script>
 

@@ -1,13 +1,18 @@
 const { useEffect, useState } = React
 
 function Counter() {
-  // Declare a new state variable, which we'll call "count"
-  const [count, setCount] = useState(0);
+
+  const [count, setCount] = useState(99990);
 
   return (
     <div>
       <p>You clicked {count} times</p>
-      <button onClick={() => setCount(count + 1)}>
+      <button 
+      onClick={() => {
+        console.log("button onclick")
+        setCount(count + 1)
+      }
+      }>
         Click me
       </button>
     </div>

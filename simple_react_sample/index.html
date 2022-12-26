@@ -1,46 +1,51 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Add React in One Minute</title>
-  </head>
-  <body>
 
-    <h2>Add React in One Minute</h2>
-    <p>This page demonstrates using React with no build tooling.</p>
-    <p>React is loaded as a script tag.</p>
+<head>
+  <meta charset="UTF-8" />
+  <title>Add React in One Minute</title>
+</head>
 
+<body>
 
-    <div id="root"></div>
-
-
-    <!-- Load React. -->
-    <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
-    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
-    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  <h2>Add React in One Minute</h2>
+  <p>This page demonstrates using React with no build tooling.</p>
+  <p>React is loaded as a script tag.</p>
 
 
-    <!-- Load our React component. -->
-    <!-- <script type="text/babel" src="like_button.jsx"></script> -->
-    <script type="text/babel" src="counter.jsx"></script>
-    <script type="text/babel">
-    
-      function MyApp() {
-        return (
-          <div>
-        <h1>Hello, world!</h1>
-        <Counter />
+  <div id="root"></div>
+
+
+  <!-- Load React. -->
+  <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  xs
+
+  <!-- Load our React component. -->
+  <!-- <script type="text/babel" src="like_button.jsx"></script> -->
+  <script type="text/babel" src="counter.jsx"></script>
+  <script type="text/babel">
+
+    function MyApp() {
+      return (
+        <div>
+          <h1>Hello, world!</h1>
+          <Counter />
         </div>)
-       
-      }
 
-      const container = document.getElementById('root');
-      const root = ReactDOM.createRoot(container);
-      root.render(<Counter />)
+    }
 
-    </script>
+    const container = document.getElementById('root');
+    const root = ReactDOM.createRoot(container);
+    root.render(
+      <Counter />
+    )
 
-  
-  </body>
+  </script>
+
+
+</body>
+
 </html>
